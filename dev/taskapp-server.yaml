@@ -18,7 +18,7 @@ spec:
       containers:
         - name: taskapp-server
           image: ghcr.io/yash-repo9576/taskapp-backend:latest  # Change this to your actual image
-          imagePullPolicy: Never
+          imagePullPolicy: Always
           ports:
             - containerPort: 5000
 ---
