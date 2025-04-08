@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: taskapp-ui
-          image: ghcr.io/yash-repo9576/taskapp-ui:latest  # Change this to your actual image
+          image: ghcr.io/yash-repo9576/taskapp-ui:updated  # Change this to your actual image
           imagePullPolicy: Always
           ports:
             - containerPort: 80
