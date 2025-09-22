@@ -1,0 +1,23 @@
+fullname: taskapp
+
+# This will set the replicaset count
+replicaCount: 1
+
+# This sets the container images
+image:
+  pullPolicy: IfNotPresent
+  backendRepository: ghcr.io/yash-repo9576/taskapp-backend
+  frontendRepository: ghcr.io/yash-repo9576/taskapp-ui
+  tag: "latest"
+
+backendPodLabels:
+  app: taskapp-backend
+
+frontendPodLabels:
+  app: taskapp-ui
+
+# This is for setting up a service
+service:
+  type: LoadBalancer
+  backendPort: 5000
+  frontendPort: 80
