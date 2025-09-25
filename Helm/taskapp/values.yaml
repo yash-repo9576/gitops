@@ -9,7 +9,7 @@ image:
   backendRepository: ghcr.io/yash-repo9576/taskapp-backend
   frontendRepository: ghcr.io/yash-repo9576/taskapp-ui
   backendTag: "latest"
-  frontendTag: "latest"
+  frontendTag: "4"
 
 backendPodLabels:
   app: taskapp-backend
