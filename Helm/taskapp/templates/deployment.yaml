@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: server
-          image: "{{ .Values.image.backendRepository }}:{{ .Values.image.tag }}"
+          image: "{{ .Values.image.backendRepository }}:{{ .Values.image.backendTag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - containerPort: {{ .Values.service.backendPort }}
@@ -46,7 +46,7 @@ spec:
     spec:
       containers: 
         - name: app
-          image: "{{ .Values.image.frontendRepository }}:{{ .Values.image.tag }}"
+          image: "{{ .Values.image.frontendRepository }}:{{ .Values.image.frontendTag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - containerPort: {{ .Values.service.frontendPort }}

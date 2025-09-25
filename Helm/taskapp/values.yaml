@@ -8,7 +8,8 @@ image:
   pullPolicy: IfNotPresent
   backendRepository: ghcr.io/yash-repo9576/taskapp-backend
   frontendRepository: ghcr.io/yash-repo9576/taskapp-ui
-  tag: "latest"
+  backendTag: "latest"
+  frontendTag: "latest"
 
 backendPodLabels:
   app: taskapp-backend
