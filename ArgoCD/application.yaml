@@ -8,13 +8,14 @@ spec:
   source:
     repoURL: https://github.com/yash-repo9576/gitops.git
     targetRevision: HEAD
-    path: dev   # Analogy to different env
+    path: Helm/taskapp   # Analogy to different env
+    helm:
+      valueFiles:
+        - values.yaml
   destination:
     server: https://kubernetes.default.svc
-    namespace: gitops # Namespace to Deploy Application
+    namespace: default # Namespace to Deploy Application
   syncPolicy:
-    syncOptions:
-      - CreateNamespace=true
     automated:
       selfHeal: true  # Automated Polling the git repository for Overwriting
       prune: true     # Automated Pruning of the kubernetes resources
